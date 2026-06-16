@@ -3,7 +3,7 @@ from database import init_db, get_all_memos, get_memo, create_memo, update_memo,
 
 app = Flask(__name__)
 
-# アプリ起動時にDBを初期化
+# アプリ起動時にDBを初期化する（テーブルが存在しない場合は作成する）
 init_db()
 
 @app.route("/")
